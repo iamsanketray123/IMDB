@@ -13,5 +13,6 @@ struct MovieViewModel {
     let imagePath: String
     let title: String
     let rating: Double
-    let playlist: String?
+    let id: String
+    var playlist: String?
 }

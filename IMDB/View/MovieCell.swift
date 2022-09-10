@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 protocol MovieCellDelegate {
-    func shouldFavourite(_ cell: MovieCell, movie: String, val: Bool)
+    func shouldFavourite(_ cell: MovieCell, movie: Movie, val: Bool)
 }
 
 class MovieCell: UITableViewCell {
@@ -50,7 +50,7 @@ class MovieCell: UITableViewCell {
         let imagePath = viewModel.imagePath
         let imageString = "https://image.tmdb.org/t/p/w500" + imagePath
         let imageURL = URL(string: imageString)!
-
+        
         backgroundImage.kf.cancelDownloadTask()
         backgroundImage.kf.setImage(with: imageURL)
         
@@ -61,6 +61,11 @@ class MovieCell: UITableViewCell {
     }
     
     @IBAction func starButtonTapped(_ sender: Any) {
-        delegate?.shouldFavourite(self, movie: viewModel!.title, val: true)
+        
+        // Validation
+        guard let viewModel = viewModel else { return }
+        
+        // Call Delegate Method
+        delegate?.shouldFavourite(self, movie: Movie(imagePath: viewModel.imagePath, title: viewModel.title, rating: viewModel.rating, id: viewModel.id, playlist: viewModel.playlist), val: true)
     }
 }

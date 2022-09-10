@@ -79,7 +79,7 @@
 				1906673328CC8B5E0044DC0F /* Model */,
 				1906673528CC8B6B0044DC0F /* View */,
 				1906673428CC8B640044DC0F /* ViewModel */,
-				1906673628CC8B810044DC0F /* Resources */,
+				1906673C28CCBA4C0044DC0F /* Services */,
 				1906671A28CC7F9E0044DC0F /* Main.storyboard */,
 				1906671D28CC7F9F0044DC0F /* Assets.xcassets */,
 				1906671F28CC7F9F0044DC0F /* LaunchScreen.storyboard */,
@@ -92,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				1906671828CC7F9E0044DC0F /* MovieViewController.swift */,
-				1906673728CC8C640044DC0F /* MovieAPIService.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -122,11 +121,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1906673628CC8B810044DC0F /* Resources */ = {
+		1906673C28CCBA4C0044DC0F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1906673728CC8C640044DC0F /* MovieAPIService.swift */,
 			);
-			path = Resources;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		5DF547DED3692E452AA84736 /* Pods */ = {

@@ -20,26 +20,67 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPd-IN-Y4s">
+                                <rect key="frame" x="314" y="762" width="80" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filter" translatesAutoresizingMaskIntoConstraints="NO" id="hJC-Fk-knr">
+                                        <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="6RS-Wz-1pJ"/>
+                                            <constraint firstAttribute="height" constant="60" id="eee-tX-6eA"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="EMM-XW-BkK"/>
+                                    <constraint firstAttribute="width" constant="80" id="j0O-s4-G5F"/>
+                                    <constraint firstItem="hJC-Fk-knr" firstAttribute="centerX" secondItem="JPd-IN-Y4s" secondAttribute="centerX" id="tPe-as-tng"/>
+                                    <constraint firstItem="hJC-Fk-knr" firstAttribute="centerY" secondItem="JPd-IN-Y4s" secondAttribute="centerY" id="vjO-AC-Ld5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-RO-P9b">
+                                <rect key="frame" x="314" y="762" width="80" height="80"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="filterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Cg-PI-SeT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="GUA-RO-P9b" firstAttribute="bottom" secondItem="JPd-IN-Y4s" secondAttribute="bottom" id="71x-Zf-zk5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p9u-tI-YSz" secondAttribute="bottom" id="ANi-qD-PEA"/>
                             <constraint firstItem="p9u-tI-YSz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DVE-VX-11R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p9u-tI-YSz" secondAttribute="trailing" id="K15-1G-fcA"/>
+                            <constraint firstItem="GUA-RO-P9b" firstAttribute="leading" secondItem="JPd-IN-Y4s" secondAttribute="leading" id="Xzh-og-t1c"/>
                             <constraint firstItem="p9u-tI-YSz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yie-Ti-Ec9"/>
+                            <constraint firstItem="GUA-RO-P9b" firstAttribute="trailing" secondItem="JPd-IN-Y4s" secondAttribute="trailing" id="gzi-hS-Hn5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JPd-IN-Y4s" secondAttribute="bottom" constant="20" id="jcP-IP-cUY"/>
+                            <constraint firstItem="GUA-RO-P9b" firstAttribute="top" secondItem="JPd-IN-Y4s" secondAttribute="top" id="m6k-Jp-ztb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JPd-IN-Y4s" secondAttribute="trailing" constant="20" id="oIY-My-RFp"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filterButton" destination="GUA-RO-P9b" id="fl5-cc-Vrk"/>
+                        <outlet property="filterContainerView" destination="JPd-IN-Y4s" id="A10-lG-tGZ"/>
                         <outlet property="tableView" destination="p9u-tI-YSz" id="reb-IA-JRx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="94"/>
+            <point key="canvasLocation" x="128.98550724637681" y="93.75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="filter" width="96" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
