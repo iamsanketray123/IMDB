@@ -68,15 +68,3 @@ extension MovieViewController: MovieCellDelegate {
 //        }
     }
 }
-//
-//
-//extension UserDefaults {
-//
-//    private class func playlistsKey() -> String { return "playlistsKey" }
-//    public class func getSavedPlaylists()-> [String: String] {
-//
-//    }
-//    public class func addMovieToPlaylist(movie: String, playlist: String) {
-//
-//    }
-//}
